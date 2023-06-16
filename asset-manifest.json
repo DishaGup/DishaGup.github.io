@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.759a09d5.css",
-    "main.js": "/static/js/main.f45cb5e0.js",
+    "main.css": "/static/css/main.9e5d1e57.css",
+    "main.js": "/static/js/main.693197a5.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/homeDecor.png": "/static/media/homeDecor.eafa0da6d56c48ede796.png",
     "static/media/wrapup.png": "/static/media/wrapup.e5edfcd05a6f250f7d6d.png",
     "static/media/Disha_Gupta_Resume-1.png": "/static/media/Disha_Gupta_Resume-1.7f03a509c6c08e464360.png",
     "static/media/photoabout.png": "/static/media/photoabout.cdbae2e51eac2c63f272.png",
-    "static/media/Disha_Gupta_Resume.pdf": "/static/media/Disha_Gupta_Resume.126f3a7bab83aa4c7895.pdf",
+    "static/media/Disha_Gupta_Resume.pdf": "/static/media/Disha_Gupta_Resume.764bb12b05598ce9caf4.pdf",
     "static/media/homeimage.jpg": "/static/media/homeimage.2d2f5b7086be86b89f74.jpg",
     "index.html": "/index.html",
-    "main.759a09d5.css.map": "/static/css/main.759a09d5.css.map",
-    "main.f45cb5e0.js.map": "/static/js/main.f45cb5e0.js.map",
+    "main.9e5d1e57.css.map": "/static/css/main.9e5d1e57.css.map",
+    "main.693197a5.js.map": "/static/js/main.693197a5.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.759a09d5.css",
-    "static/js/main.f45cb5e0.js"
+    "static/css/main.9e5d1e57.css",
+    "static/js/main.693197a5.js"
   ]
 }
