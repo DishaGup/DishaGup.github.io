@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import Typewriter from "typewriter-effect";
+import { context } from "../../utility/ContextProvider";
 
 function Type() {
+  const {textcolour}=useContext(context)
   return (
-    <Typewriter
+    <Typewriter className={textcolour}
       options={{
         strings: [
           "Developer",

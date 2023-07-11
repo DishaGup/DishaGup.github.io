@@ -13,43 +13,53 @@ export const resumeLink ="https://drive.google.com/file/d/1OCOYLpZTUJtfit6cIrK7Z
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
 
+const handleResume=()=>{
+  window.open(resumeLink)
+}
+
+
+
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
 
   return (
     <div>
-      <Container fluid className="resume-section">
+      <Container fluid id='myresume' className="resume-section">
        
         <Row style={{ justifyContent: "center", position: "relative" }}>
-          <Button
-            variant="primary"
-            href={pdf}
-            target="_blank"
-            id='resume-link-1'
-            style={{ maxWidth: "250px" }}
-          >
-            <AiOutlineDownload />
-            &nbsp;Download CV
-          </Button>
+        
+          <Button id="resume-button-no" onClick={handleResume}        >
+                <a
+                  id="resume-link-no"
+                  href={pdf}
+                  download="Disha_Gupta_Resume"
+                  target="_blank"
+                 // className={`${style.resumes} nav-link resume`}
+                  rel="noreferrer"
+                >
+                  Resume 
+                </a>
+              </Button>
         </Row>
 
         <Row className="resume">
-          <Document  file={pdf} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} renderTextLayer='false' />
+          <Document  file={pdf} >
+            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6}  />
           </Document>
         </Row>
 
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
+download={resumeLink}
+
             href={resumeLink}
             target="_blank"
-            id="resume-link-2"
-            style={{ maxWidth: "250px" }}
+           
+            style={{ maxWidth: "350px" }}
           >
-            <AiOutlineDownload />
-            &nbsp;Download CV
+            Download Resume
           </Button>
         </Row>
       </Container>

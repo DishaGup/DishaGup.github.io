@@ -1,25 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import ParticleBackground from "../../Components/Partclebackground";
-import Particle from "../Background/Particle";
-// import homeLogo from "../../Assets/home-main.svg";
 import { loadFull } from "tsparticles";
+
 import  homeimage from '../../Assests/homeimage.jpg'
 import Home2 from "./Home2";
 import Type from "./Type";
 import { Button, Flex } from "@chakra-ui/react";
-import { resumeLink } from "../Resume/ResumeNew";
-import { Link } from "react-router-dom";
-import { AiOutlineDownload } from "react-icons/ai";
+import { context } from "../../utility/ContextProvider";
+
 
 function Home() {
+const {textcolour}=useContext(context)
+
+
   return (
-    <section className="nav-link home">
-      <Container fluid className="home-section" id="home">
-     <Particle/>
-        <Flex className="home-content" justify={'space-around'}  >
-          <Row>
-               <Col md={5} style={{ paddingBottom: 20 }}>
+    <section  id="home">
+      <Container fluid className="home-section" >
+        <div  className="home-content" >
+          <Row   >
+               <Col md={5} style={{ paddingBottom: 20 }}  >
               <img 
                 src={homeimage}
                 alt="home pic"
@@ -39,7 +38,7 @@ function Home() {
 
               <h1 className="heading-name">
                 I'M
-                <strong className="main-name"> DISHA GUPTA</strong>
+                <strong className={textcolour}> DISHA GUPTA</strong>
               </h1>
 
               <div style={{ padding: 50, textAlign: "left" }}>
@@ -48,9 +47,9 @@ function Home() {
             </Col>           
           </Row>
         
-        </Flex>
+        </div>
       </Container>
-      <Home2 />
+     
     </section>
   );
 }

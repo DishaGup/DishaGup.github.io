@@ -3,14 +3,19 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
-import { HStack, textDecoration } from "@chakra-ui/react";
+import { HStack, textDecoration,Box } from "@chakra-ui/react";
+import { useContext } from "react";
+import { context } from "../../utility/ContextProvider";
 
 function ProjectCards(props) {
+ 
+  const {textcolour}=useContext(context)
+  
   return (
-    <Card className="project-card" style={{width:'600px',justifyContent:'center',margin:'auto'}}  >
+    <Box className="project-card" justifyContent='center' margin='auto'   >
       <Card.Img variant="top" src={props.imgPath} alt="card-img" />
       <Card.Body>
-        <Card.Title className="project-title" style={{fontSize:'30px',textDecorationLine:'underline',margin:'12px'  }}  >{props.title}</Card.Title>
+        <Card.Title className={`project-title ${textcolour} `} style={{fontSize:'30px',textDecorationLine:'underline',margin:'12px'  }}  >{props.title}</Card.Title>
         <Card.Text className="project-description" style={{ textAlign: "justify",fontSize:'16px' }}>
           {props.description}
         </Card.Text>
@@ -20,7 +25,7 @@ function ProjectCards(props) {
 
   <HStack  justify={"space-around"} >   
 
-        <Button variant="primary" href={props.ghLink} target="_blank">
+        <Button variant="primary"  className='project-github-link' href={props.ghLink} target="_blank">
           <BsGithub /> &nbsp;
           {props.isBlog ? "Blog" : "GitHub"}
         </Button>
@@ -31,9 +36,11 @@ function ProjectCards(props) {
 
         {!props.isBlog && props.demoLink && (
           <Button
+          as={'a'}
             variant="primary"
             href={props.demoLink}
             target="_blank"
+            className="project-deployed-link"
             style={{ marginLeft: "10px" }}
           >
             <CgWebsite /> &nbsp;
@@ -41,7 +48,7 @@ function ProjectCards(props) {
           </Button> 
         )}</HStack>
       </Card.Body>
-    </Card>
+    </Box>
   );
 }
 export default ProjectCards;

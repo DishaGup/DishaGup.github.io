@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import Card from "react-bootstrap/Card";
 import { ImPointRight } from "react-icons/im";
+import { context } from "../../utility/ContextProvider";
 
 function AboutCard() {
+  const {textcolour} =useContext(context)
   return (
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">
-          <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Disha Gupta </span>
-            from <span className="purple"> Agra, UP , India.</span>
+          <p  style={{ textAlign: "justify" }}>
+            Hi Everyone, I am <span className={textcolour} id='user-detail-name'   >Disha Gupta </span>
+            from <span className={textcolour}> Agra, UP , India.</span>
             <br />I am a techie developing career in Tech.
             <br />
             <br />
@@ -27,7 +29,7 @@ function AboutCard() {
             </li>
           </ul>
 
-          <p style={{ color: "rgb(155 126 172)" }}>
+          <p className={textcolour}>
           “Little things don’t mean a lot, they mean everything.”{" "}
           </p>
         </blockquote>
